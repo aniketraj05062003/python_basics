@@ -1,0 +1,207 @@
+
+
+# pyhton function 
+
+def my_function():
+    print("Hello my function")
+
+my_function()
+my_function()
+my_function()
+
+# so function stores data and when call function it directly gives result
+
+
+# Return values : addition
+
+def add(a,b):
+    result =a+b
+    return result
+
+num1=int(input("Enter first number"))
+num2=int(input("Enter second number"))
+
+sum=add(num1,num2)
+
+print("sum of both numbers is: ",sum)
+
+# check even number and odd number
+
+def check_number(number):
+    if number % 2 == 0:
+        return "even number"
+    else:
+        return "odd number"
+
+num=int(input("enter number"))
+result = check_number(num)
+print(num ,"is an" ,result)
+
+# check positive number of negative number
+
+def check_number(number):
+    if number>0:
+        return "positive number"
+    elif number<0:
+        return "negative number"
+
+    else:
+        return "zero"
+
+num=int(input("enter number"))
+
+result = check_number(num)
+
+print(result)
+
+
+# student result program
+
+def students_result(marks):
+    if marks>=33:
+        return "pass"
+    else:
+        return "fail"
+
+total_marks=int(input("Enter your marks: "))
+
+result = students_result(total_marks)
+
+print(result)
+
+# simple calculator function
+
+def calculator(a,b,operator):
+    if operator =="+":
+        return a+b
+    elif operator =="-":
+        return a-b
+    elif operator=="*":
+        return a*b
+    elif operator=="/":
+        return a/b
+    else:
+        return "invalid operator"
+
+num1=int(input("Enter first number: "))
+num2=int(input("Enter second number: "))
+operator_=input("Enter an operator (+,-,*,/): ")
+
+result = calculator(num1,num2,operator_)
+print(result)
+
+# prime nubmer check
+
+def prime_check(numbers):
+    if numbers<2:
+        return "Not prime"
+    for i in range(2,numbers):
+        if numbers%i==0:
+            return "Not Prime"
+    return "Prime Number"
+
+num = int(input("Enter num: "))
+result = prime_check(num)
+print(result)
+
+
+# multiple arguments
+
+def my_function(*kids):
+    print("the youngest child is:"+kids[2])
+    print("type",type(kids))
+    print("the youngest child is:"+kids[1])
+    print("the youngest child is:"+kids[0])
+
+my_function("rahul","ram","shyam")
+
+# find max value
+
+def my_function(*numbers):
+    total=0
+    if len(numbers)==0:
+        return None
+
+    max_num=numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num=num
+    return max_num
+
+print("max num" ,my_function(5,2,7,9))
+
+
+# keyword argument
+
+def my_function(**kids):
+    print("his last name is: "+kids["lname"])
+    print(type(kids))
+
+my_function(fname="ram",lname="singh")
+
+
+# Unpacking dictionaries with *
+
+def my_function(fname,lname):
+    print("Hello",fname,lname)
+
+Person={"fname":"Aniket","lname":"Yadav"}
+my_function(**Person)
+
+# Combining *args and **kwargs
+
+def my_function(Title,*args,**kwargs):
+    print("Title: ",Title)
+    print("Positional arguments",args)
+    print("Keyword arguments",kwargs)
+
+my_function("User info","Aniket","Vipin",age=23,city="New Delhi")
+
+def my_function():
+    print("Hello from a function")
+
+my_function()
+my_function()
+
+# parameter of function_
+
+def my_function(a,b):
+    return a+b
+num1=int(input("enter first num:"))
+num2=int(input("enter second num:"))
+result=my_function(num1,num2)
+print("sum of two numbers: ",result)
+
+# Addition of two numbers
+
+def add(a,b):
+    result=a+b
+    return result
+num = add(10,20)
+
+print("Answer =",num)
+
+# Calculator Program
+
+def calculator(a,b,operator):
+    if operator =="+":
+        return a+b
+    elif operator=="-":
+        return a-b
+    elif operator=="*":
+        return a*b
+    elif operator=="/":
+        return a/b
+    else:
+        return "Invalid Operator"
+
+num1=int(input("Enter first number: "))
+num2=int(input("Enter second number: "))
+opertor_input=input("Enter an operator (+,-,*,/): ")
+
+result  = calculator(num1,num2,opertor_input)
+
+print(result)
+
+
+
